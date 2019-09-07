@@ -22,14 +22,15 @@ binding.pry
     if params[:username] = "" || params[:password] = ""
       redirect "/failure"
     else
-      user = User.new(:username => params[:username], :password => params[:password])
-binding.pry
-        if user.save
-          redirect "/login"
-        else
-          # redirect "/failure"
-          redirect "/login"
-        end
+      redirect "/login"
+#       user = User.new(:username => params[:username], :password => params[:password])
+# binding.pry
+#         if user.save
+#           redirect "/login"
+#         else
+#           # redirect "/failure"
+#           redirect "/login"
+#         end
 
     end
   end
